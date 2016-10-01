@@ -1,7 +1,7 @@
 module.exports = {
     script: {
         map: './',
-        src: ['src/ts/**/*.{ts,tsx}', 'typings/**/*.d.ts'],
+        src: ['node_modules/@types/**/index.d.ts', 'src/ts/**/*.{ts,tsx}'],
         dst: 'public/js'
     },
 
@@ -13,16 +13,6 @@ module.exports = {
     copy: {
         src: 'src/html/*.*',
         dst: 'public'
-    },
-
-    vendor: {
-        src: [
-           'bower_components/require-css/css.js',
-            'node_modules/react/dist/react.js',
-            'node_modules/react-dom/dist/react-dom.js',
-            'node_modules/requirejs/require.js'
-        ],
-        dst: 'public/vendor'
     },
 
     watch: {

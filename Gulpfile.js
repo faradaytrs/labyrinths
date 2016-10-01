@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var tasks = ['copy', 'vendor', 'style', 'script'];
+var tasks = ['copy', 'style', 'script'];
 tasks.forEach(task => {
     gulp.task(task, require('./tasks/' + task));
 });
