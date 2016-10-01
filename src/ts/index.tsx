@@ -1,11 +1,15 @@
-///<reference types="react"/>
-///<reference types="react-dom"/>
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {Field} from './field';
 
 class Preview extends React.Component<any, any> {
     render() {
-        return <div>1</div>;
+        const field = [
+            [1, 0, 1],
+            [0, 1, 0],
+            [0, 0 ,1]
+        ]
+        return <Field width="300" height="300" field={field} />;
     }
 }
 
