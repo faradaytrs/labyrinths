@@ -5,18 +5,17 @@ export class Field extends React.Component<any, any> {
     cellWidth: number
     constructor(props) {
         super(props);
-        this.cellHeight = 50;
-        this.cellWidth = 50;
+        this.cellHeight = 20;
+        this.cellWidth = 20;
     }
     drawField(ctx) {
-        const field = this.props.field;
+        const field = this.props.field.field;
         field.forEach((row, i) => {
             row.map((cell, j) => {
                 ctx.fillStyle = cell ? "black": "white";
                 ctx.fillRect(j*this.cellWidth, i*this.cellHeight, this.cellWidth, this.cellHeight);
             });
         });
-
     }
     componentDidMount() {
         const ctx = this.refs.field.getContext('2d');
